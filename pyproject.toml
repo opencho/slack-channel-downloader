@@ -1,0 +1,19 @@
+[project]
+name = "slack-channel-downloader"
+version = "0.1.0"
+description = "Download messages and files from Slack channels"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "slack-sdk>=3.39.0",
+]
+
+[project.scripts]
+slack-download = "main:download_channel_content"
+
+[tool.uv]
+package = true
